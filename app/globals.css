@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #081014;
+  --paper: #f3f5ef;
+  --lime: #d7fb5f;
+  --cyan: #8de7e1;
+  --muted: #9ca9aa;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--font-manrope), sans-serif; }
+::selection { background: var(--lime); color: var(--ink); }
+
+.grid-noise { background-image: linear-gradient(rgba(141, 231, 225, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(141, 231, 225, .055) 1px, transparent 1px); background-size: 42px 42px; }
+.soft-glow { box-shadow: 0 0 80px rgba(215, 251, 95, .10), inset 0 1px 0 rgba(255,255,255,.08); }
+.text-balance { text-wrap: balance; }
+main { display: flex; flex-direction: column; }
+main > section#sobre-mi:not(.about-v5) { display: none; }
+main > .about-v5 { order: 20; }
+main > footer { order: 30; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
