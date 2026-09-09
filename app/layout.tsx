@@ -3,6 +3,56 @@ import './globals.css';
 
 const siteUrl = 'https://vmirandd.github.io';
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://vmirandd.github.io/#person",
+      "name": "Victor Miranda",
+      "url": "https://vmirandd.github.io/",
+      "jobTitle": "Data Owner & Data Engineer",
+      "description": "Data Owner & Data Engineer especializado en Google Cloud, BigQuery, Data Engineering, Data Governance, BI, AI y automatización.",
+      "sameAs": [
+        "https://www.linkedin.com/in/vmirandd/",
+        "https://github.com/vmirandd"
+      ],
+      "knowsAbout": [
+        "Data Engineering",
+        "Data Governance",
+        "Google Cloud",
+        "BigQuery",
+        "Data Analytics",
+        "Business Intelligence",
+        "Qlik Sense",
+        "Looker Studio",
+        "Apache Airflow",
+        "Cloud Composer",
+        "Python",
+        "SQL",
+        "Oracle",
+        "Snowflake",
+        "Databricks",
+        "Azure Data Factory",
+        "Artificial Intelligence",
+        "DataOps",
+        "FinOps"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vmirandd.github.io/#website",
+      "url": "https://vmirandd.github.io/",
+      "name": "Victor Miranda | Data Owner & Data Engineer",
+      "description": "Portafolio profesional de Victor Miranda, Data Owner & Data Engineer.",
+      "publisher": {
+        "@id": "https://vmirandd.github.io/#person"
+      },
+      "inLanguage": "es-CO"
+    }
+  ]
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
@@ -105,8 +155,15 @@ export default function RootLayout({
           } as React.CSSProperties
         }
       >
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(structuredData),
+  }}
+/>
         {children}
       </body>
     </html>
   );
 }
+
