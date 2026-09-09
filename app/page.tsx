@@ -296,9 +296,240 @@ export default function Home() {
       </div>
     </div>
   </section>
-<section className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl items-start gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="04 / AI + Data Engineering" title={<>Preguntas de negocio,<br /><span className="text-[#8de7e1]">respuestas con contexto.</span></>} text="La inteligencia artificial es más útil cuando entiende tus datos, tus procesos y tus decisiones." /><div className="flex items-center gap-3 font-mono text-[10px] text-[#9ca9aa]"><span className="h-px w-10 bg-[#d7fb5f]" /> DEMO VISUAL · SIN DATOS REALES</div></div><div className="soft-glow border border-white/15 bg-[#0c191c] p-5 md:p-7"><div className="flex items-center justify-between border-b border-white/10 pb-4"><div className="flex items-center gap-2 font-mono text-xs text-[#9ca9aa]"><Terminal size={15} className="text-[#d7fb5f]" /> ask-data</div><button onClick={() => setDemoStarted(true)} className="flex items-center gap-2 border border-[#d7fb5f]/40 px-3 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]"><Play size={12} fill="currentColor" /> {demoStarted ? 'RUNNING' : 'RUN DEMO'}</button></div><div className="min-h-64 pt-6 font-mono text-xs leading-7"><p className="text-[#d7fb5f]">$ ask-data</p><p className="text-[#f3f5ef]">&gt; ¿Cuál es la categoría con mayor crecimiento?</p><AnimatePresence>{demoStarted ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 space-y-3"><p className="text-[#9ca9aa]">Analyzing data...</p><div className="h-2 w-full bg-white/10"><motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 1.2 }} className="h-full bg-[#d7fb5f]" /></div><p className="text-[#8de7e1]">Business insight generated.</p><p className="border-l border-[#d7fb5f] pl-3 text-[#f3f5ef]">Demo visual: conecta tus fuentes para obtener insights reales.</p></motion.div> : <p className="mt-6 text-[#9ca9aa]">Ready when your data is.</p>}</AnimatePresence></div></div></div></section>
+<section className="px-5 py-24 lg:px-8 lg:py-32">
+  <div className="mx-auto grid max-w-7xl items-start gap-16 lg:grid-cols-[.8fr_1.2fr]">
 
-    <section id="tecnologias" className="border-t border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="05 / Tecnologías" title={<>Las herramientas son el medio.<br /><span className="text-[#d7fb5f]">El criterio, la diferencia.</span></>} /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">{technologyGroups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .06 }} viewport={{ once: true }} className={`border border-white/10 p-6 ${index === 0 ? 'lg:col-span-2' : ''}`}><div className="mb-6 flex items-center gap-3"><group.icon size={19} className="text-[#d7fb5f]" /><h3 className="font-display text-xl">{group.title}</h3></div><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="border border-white/15 px-3 py-2 font-mono text-[10px] text-[#c1cbca] transition-colors hover:border-[#8de7e1] hover:text-[#8de7e1]">{item}</span>)}</div></motion.div>)}</div></div></section>
+    <div>
+      <SectionHeading
+        eyebrow="04 / AI + Data Engineering"
+        title={
+          <>
+            Preguntas de negocio,
+            <br />
+            <span className="text-[#8de7e1]">
+              respuestas con contexto.
+            </span>
+          </>
+        }
+        text="La inteligencia artificial es más útil cuando entiende tus datos, tus procesos y tus decisiones."
+      />
+
+      <div className="flex items-center gap-3 font-mono text-[10px] text-[#9ca9aa]">
+        <span className="h-px w-10 bg-[#d7fb5f]" />
+        DEMO VISUAL · DATOS SIMULADOS
+      </div>
+    </div>
+
+    <div className="soft-glow border border-white/15 bg-[#0c191c] p-5 md:p-7">
+
+      <div className="flex items-center justify-between border-b border-white/10 pb-4">
+
+        <div className="flex items-center gap-2 font-mono text-xs text-[#9ca9aa]">
+          <Terminal size={15} className="text-[#d7fb5f]" />
+          ask-data
+        </div>
+
+        <button
+          onClick={() => setDemoStarted(true)}
+          className="flex items-center gap-2 border border-[#d7fb5f]/40 px-3 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]"
+        >
+          <Play size={12} fill="currentColor" />
+          {demoStarted ? "RUNNING" : "RUN DEMO"}
+        </button>
+
+      </div>
+
+      <div className="min-h-[26rem] pt-6 font-mono text-xs leading-6">
+
+        <p className="text-[#d7fb5f]">$ ask-data</p>
+
+        <p className="text-[#f3f5ef]">
+          &gt; ¿Cuál es la categoría con mayor crecimiento en ventas?
+        </p>
+
+        <AnimatePresence>
+
+          {!demoStarted ? (
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-6 text-[#9ca9aa]"
+            >
+              Ready when your data is.
+            </motion.p>
+
+          ) : (
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-5 space-y-4"
+            >
+
+              <div className="space-y-1 text-[10px] text-[#9ca9aa]">
+                <p>[10:24:17] Conectando a BigQuery... ✓</p>
+                <p>[10:24:18] Cargando datos de ventas... ✓ 1.2M filas</p>
+                <p>[10:24:19] Analizando tendencias por categoría... ✓</p>
+                <p>[10:24:22] Generando insights con IA... ✓</p>
+              </div>
+
+              <div className="h-1.5 w-full bg-white/10">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1.4 }}
+                  className="h-full bg-[#d7fb5f]"
+                />
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.45 }}
+                className="grid gap-4 md:grid-cols-[1.15fr_.85fr]"
+              >
+
+                <div className="border border-white/10 bg-[#081014]">
+
+                  <div className="border-b border-white/10 px-3 py-2 text-[10px] text-[#8de7e1]">
+                    RESULTADOS · TOP CATEGORÍAS
+                  </div>
+
+                  <div className="divide-y divide-white/10">
+
+                    {[
+                      ["01", "Herramientas", "$1.775M", "+42%"],
+                      ["02", "Construcción", "$1.254M", "+28%"],
+                      ["03", "Hogar", "$897M", "+18%"],
+                      ["04", "Jardín", "$472M", "+12%"],
+                      ["05", "Baño", "$332M", "+7%"],
+                    ].map(([number, category, sales, growth]) => (
+
+                      <div
+                        key={category}
+                        className="grid grid-cols-[28px_1fr_70px_45px] items-center gap-2 px-3 py-2 text-[9px]"
+                      >
+
+                        <span className="text-[#9ca9aa]">{number}</span>
+
+                        <span className="text-[#f3f5ef]">{category}</span>
+
+                        <span className="text-[#9ca9aa]">{sales}</span>
+
+                        <span
+                          className={
+                            growth === "+42%"
+                              ? "text-[#d7fb5f]"
+                              : "text-[#8de7e1]"
+                          }
+                        >
+                          {growth}
+                        </span>
+
+                      </div>
+
+                    ))}
+
+                  </div>
+
+                </div>
+
+                <div className="border border-white/10 bg-[#081014] p-4">
+
+                  <p className="mb-4 text-[10px] text-[#8de7e1]">
+                    CRECIMIENTO · 6 MESES
+                  </p>
+
+                  <div className="space-y-3">
+
+                    {[
+                      ["Herramientas", 42],
+                      ["Construcción", 28],
+                      ["Hogar", 18],
+                      ["Jardín", 12],
+                      ["Baño", 7],
+                    ].map(([category, value]) => (
+
+                      <div key={category}>
+
+                        <div className="mb-1 flex justify-between text-[9px]">
+
+                          <span className="text-[#c1cbca]">
+                            {category}
+                          </span>
+
+                          <span className="text-[#d7fb5f]">
+                            +{value}%
+                          </span>
+
+                        </div>
+
+                        <div className="h-1.5 bg-white/10">
+
+                          <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: `${value}%` }}
+                            transition={{
+                              duration: 0.8,
+                              delay: 1.55 + Number(value) / 100,
+                            }}
+                            className="h-full bg-[#8de7e1]"
+                          />
+
+                        </div>
+
+                      </div>
+
+                    ))}
+
+                  </div>
+
+                </div>
+
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.15 }}
+                className="border-l-2 border-[#d7fb5f] bg-[#081014] px-4 py-3"
+              >
+
+                <p className="text-[#d7fb5f]">
+                  ✦ Business insight generated.
+                </p>
+
+                <p className="mt-1 text-[10px] leading-5 text-[#f3f5ef]">
+                  La categoría <strong>Herramientas</strong> presenta el mayor
+                  crecimiento <strong>(+42%)</strong> durante los últimos 6 meses.
+                </p>
+
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.45 }}
+                className="pt-2 text-[9px] text-[#9ca9aa]"
+              >
+                Demo visual · datos simulados · sin conexión a fuentes reales.
+              </motion.p>
+
+            </motion.div>
+
+          )}
+
+        </AnimatePresence>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="tecnologias" className="border-t border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="05 / Tecnologías" title={<>Las herramientas son el medio.<br /><span className="text-[#d7fb5f]">El criterio, la diferencia.</span></>} /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">{technologyGroups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .06 }} viewport={{ once: true }} className={`border border-white/10 p-6 ${index === 0 ? 'lg:col-span-2' : ''}`}><div className="mb-6 flex items-center gap-3"><group.icon size={19} className="text-[#d7fb5f]" /><h3 className="font-display text-xl">{group.title}</h3></div><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="border border-white/15 px-3 py-2 font-mono text-[10px] text-[#c1cbca] transition-colors hover:border-[#8de7e1] hover:text-[#8de7e1]">{item}</span>)}</div></motion.div>)}</div></div></section>
 
     <section id="proyectos" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="06 / Capacidades representativas" title={<>Un buen proyecto empieza<br /><span className="text-[#8de7e1]">por la pregunta correcta.</span></>} text="Áreas preparadas para incorporar casos reales, con problema, solución, tecnologías y resultados verificables." /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">{projects.map((project) => <article key={project.title} className="group flex min-h-64 flex-col justify-between border border-white/10 p-5 transition-colors hover:border-[#d7fb5f]/60 hover:bg-[#0c191c]"><div><div className="mb-10 flex items-center justify-between"><project.icon size={21} className="text-[#8de7e1]" /><span className="font-mono text-[9px] text-[#9ca9aa]">{project.label}</span></div><h3 className="font-display text-xl">{project.title}</h3><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">{project.text}</p></div><span className="mt-7 flex items-center gap-2 font-mono text-[10px] tracking-[.12em] text-[#d7fb5f]">CAPACIDAD <ArrowUpRightIcon /></span></article>)}</div></div></section>
 
@@ -325,6 +556,7 @@ export default function Home() {
 function ArrowUpRightIcon() { return <ArrowUpRight size={15} />; }
 function FlowNode({ icon: Icon, label, value, active = false }: { icon: LucideIcon; label: string; value: string; active?: boolean }) { return <div className={`flex items-center justify-between border p-3 ${active ? 'border-[#d7fb5f]/50 bg-[#d7fb5f]/[.06]' : 'border-white/10'}`}><div className="flex items-center gap-3"><Icon size={17} className={active ? 'text-[#d7fb5f]' : 'text-[#8de7e1]'} /><span className="tracking-[.13em] text-[#c1cbca]">{label}</span></div><span className="text-[#9ca9aa]">{value}</span></div>; }
 function Field({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) { return <label className="block"><span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">{label}{required && ' *'}</span><input required={required} name={name} type={type} className="mt-2 w-full border border-white/15 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" /></label>; }
+
 
 
 
