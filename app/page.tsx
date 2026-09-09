@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ValidationError, useForm } from '@formspree/react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -74,6 +74,16 @@ function ContactItem({ icon: Icon, label, value, href, action, external = false 
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrollToAbout = () => document.querySelector('.about-v5')?.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    const links = document.querySelectorAll<HTMLAnchorElement>('a[href="#sobre-mi"]');
+    const handleClick = (event: MouseEvent) => {
+      event.preventDefault();
+      scrollToAbout();
+    };
+    links.forEach((link) => link.addEventListener('click', handleClick));
+    return () => links.forEach((link) => link.removeEventListener('click', handleClick));
+  }, []);
   const [demoStarted, setDemoStarted] = useState(false);
   const [state, handleSubmit] = useForm('xgaeppyr');
   const sent = state.succeeded;
