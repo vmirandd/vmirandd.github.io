@@ -35,7 +35,7 @@ const technologyGroups = [
   { title: 'Data', icon: Workflow, items: ['SQL', 'Python', 'BigQuery', 'Data Engineering', 'Data Governance'] },
   { title: 'Orchestration', icon: Workflow, items: ['Apache Airflow', 'Cloud Composer'] },
   { title: 'Database', icon: Database, items: ['Oracle', 'PL/SQL', 'BigQuery'] },
-  { title: 'BI', icon: BarChart3, items: ['Looker Studio', 'Analytics'] },
+  { title: 'BI', icon: BarChart3, items: ['Looker Studio', 'Analytics','Qlik Sense','Tableau'] },
   { title: 'Automation / AI', icon: Sparkles, items: ['Python', 'AI', 'Automation', 'APIs'] },
 ];
 
