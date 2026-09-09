@@ -87,12 +87,12 @@ function DataEcosystemVisual() {
 
   return (
     <div className="relative mt-10 overflow-hidden border border-white/10 bg-[#050b0d] shadow-[0_30px_100px_rgba(0,0,0,.35)]">
-      <div className="overflow-x-auto">
-        <div className="relative min-w-[900px]">
+      <div className="relative aspect-[16/9] w-full">
+        <div className="absolute inset-0">
           <img
             src="/images/data-ecosystem.png"
             alt="VM Data & Cloud — From Data to Business Value"
-            className="block h-auto w-full"
+            className="absolute inset-0 h-full w-full object-contain"
           />
 
           {/* Línea de flujo */}
@@ -254,6 +254,7 @@ export default function Home() {
 function ArrowUpRightIcon() { return <ArrowUpRight size={15} />; }
 function FlowNode({ icon: Icon, label, value, active = false }: { icon: LucideIcon; label: string; value: string; active?: boolean }) { return <div className={`flex items-center justify-between border p-3 ${active ? 'border-[#d7fb5f]/50 bg-[#d7fb5f]/[.06]' : 'border-white/10'}`}><div className="flex items-center gap-3"><Icon size={17} className={active ? 'text-[#d7fb5f]' : 'text-[#8de7e1]'} /><span className="tracking-[.13em] text-[#c1cbca]">{label}</span></div><span className="text-[#9ca9aa]">{value}</span></div>; }
 function Field({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) { return <label className="block"><span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">{label}{required && ' *'}</span><input required={required} name={name} type={type} className="mt-2 w-full border border-white/15 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" /></label>; }
+
 
 
 
