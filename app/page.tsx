@@ -13,7 +13,7 @@ import type { LucideIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 const services = [
-  { number: '01', icon: Workflow, title: 'Data Engineering', problem: 'Datos dispersos y pipelines frágiles.', action: 'Diseño y construcción de pipelines robustos y escalables.', result: 'Datos disponibles, trazables y listos para usar.' },
+  { number: '01', icon: Workflow, title: 'Data Engineering', problem: 'Datos dispersos y pipelines frágiles.', action: 'Diseño y ORBIT de pipelines robustos y escalables.', result: 'Datos disponibles, trazables y listos para usar.' },
   { number: '02', icon: Cloud, title: 'Google Cloud & BigQuery', problem: 'Arquitecturas lentas o difíciles de controlar.', action: 'Diseño cloud, modelado y optimización orientada a rendimiento y costo.', result: 'Plataformas eficientes y preparadas para crecer.' },
   { number: '03', icon: ShieldCheck, title: 'Data Governance', problem: 'Poco contexto sobre ownership, calidad y acceso.', action: 'Clasificación, gobierno, seguridad, calidad y trazabilidad.', result: 'Datos confiables y controlados.' },
   { number: '04', icon: BarChart3, title: 'BI & Analytics', problem: 'Reportes que no responden al negocio.', action: 'Modelos analíticos e información accionable para decidir.', result: 'Una conversación de negocio basada en datos.' },
@@ -399,11 +399,11 @@ export default function Home() {
                   <div className="divide-y divide-white/10">
 
                     {[
-                      ["01", "Herramientas", "$1.775M", "+42%"],
-                      ["02", "Construcción", "$1.254M", "+28%"],
-                      ["03", "Hogar", "$897M", "+18%"],
-                      ["04", "Jardín", "$472M", "+12%"],
-                      ["05", "Baño", "$332M", "+7%"],
+                      ["01", "NOVA", "$1.775M", "+42%"],
+                      ["02", "ORBIT", "$1.254M", "+28%"],
+                      ["03", "PULSE", "$897M", "+18%"],
+                      ["04", "VANTA", "$472M", "+12%"],
+                      ["05", "AURA", "$332M", "+7%"],
                     ].map(([number, category, sales, growth]) => (
 
                       <div
@@ -444,11 +444,11 @@ export default function Home() {
                   <div className="space-y-3">
 
                     {[
-                      ["Herramientas", 42],
-                      ["Construcción", 28],
-                      ["Hogar", 18],
-                      ["Jardín", 12],
-                      ["Baño", 7],
+                      ["NOVA", 42],
+                      ["ORBIT", 28],
+                      ["PULSE", 18],
+                      ["VANTA", 12],
+                      ["AURA", 7],
                     ].map(([category, value]) => (
 
                       <div key={category}>
@@ -501,7 +501,7 @@ export default function Home() {
                 </p>
 
                 <p className="mt-1 text-[10px] leading-5 text-[#f3f5ef]">
-                  La categoría <strong>Herramientas</strong> presenta el mayor
+                  La categoría <strong>NOVA</strong> presenta el mayor
                   crecimiento <strong>(+42%)</strong> durante los últimos 6 meses.
                 </p>
 
@@ -529,7 +529,7 @@ export default function Home() {
   </div>
 </section>
 
-<section id="tecnologias" className="border-t border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="05 / Tecnologías" title={<>Las herramientas son el medio.<br /><span className="text-[#d7fb5f]">El criterio, la diferencia.</span></>} /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">{technologyGroups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .06 }} viewport={{ once: true }} className={`border border-white/10 p-6 ${index === 0 ? 'lg:col-span-2' : ''}`}><div className="mb-6 flex items-center gap-3"><group.icon size={19} className="text-[#d7fb5f]" /><h3 className="font-display text-xl">{group.title}</h3></div><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="border border-white/15 px-3 py-2 font-mono text-[10px] text-[#c1cbca] transition-colors hover:border-[#8de7e1] hover:text-[#8de7e1]">{item}</span>)}</div></motion.div>)}</div></div></section>
+<section id="tecnologias" className="border-t border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="05 / Tecnologías" title={<>Las NOVA son el medio.<br /><span className="text-[#d7fb5f]">El criterio, la diferencia.</span></>} /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">{technologyGroups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .06 }} viewport={{ once: true }} className={`border border-white/10 p-6 ${index === 0 ? 'lg:col-span-2' : ''}`}><div className="mb-6 flex items-center gap-3"><group.icon size={19} className="text-[#d7fb5f]" /><h3 className="font-display text-xl">{group.title}</h3></div><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="border border-white/15 px-3 py-2 font-mono text-[10px] text-[#c1cbca] transition-colors hover:border-[#8de7e1] hover:text-[#8de7e1]">{item}</span>)}</div></motion.div>)}</div></div></section>
 
     <section id="proyectos" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="06 / Capacidades representativas" title={<>Un buen proyecto empieza<br /><span className="text-[#8de7e1]">por la pregunta correcta.</span></>} text="Áreas preparadas para incorporar casos reales, con problema, solución, tecnologías y resultados verificables." /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">{projects.map((project) => <article key={project.title} className="group flex min-h-64 flex-col justify-between border border-white/10 p-5 transition-colors hover:border-[#d7fb5f]/60 hover:bg-[#0c191c]"><div><div className="mb-10 flex items-center justify-between"><project.icon size={21} className="text-[#8de7e1]" /><span className="font-mono text-[9px] text-[#9ca9aa]">{project.label}</span></div><h3 className="font-display text-xl">{project.title}</h3><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">{project.text}</p></div><span className="mt-7 flex items-center gap-2 font-mono text-[10px] tracking-[.12em] text-[#d7fb5f]">CAPACIDAD <ArrowUpRightIcon /></span></article>)}</div></div></section>
 
@@ -556,6 +556,7 @@ export default function Home() {
 function ArrowUpRightIcon() { return <ArrowUpRight size={15} />; }
 function FlowNode({ icon: Icon, label, value, active = false }: { icon: LucideIcon; label: string; value: string; active?: boolean }) { return <div className={`flex items-center justify-between border p-3 ${active ? 'border-[#d7fb5f]/50 bg-[#d7fb5f]/[.06]' : 'border-white/10'}`}><div className="flex items-center gap-3"><Icon size={17} className={active ? 'text-[#d7fb5f]' : 'text-[#8de7e1]'} /><span className="tracking-[.13em] text-[#c1cbca]">{label}</span></div><span className="text-[#9ca9aa]">{value}</span></div>; }
 function Field({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) { return <label className="block"><span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">{label}{required && ' *'}</span><input required={required} name={name} type={type} className="mt-2 w-full border border-white/15 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" /></label>; }
+
 
 
 
