@@ -91,6 +91,19 @@ export default function Home() {
     }
   };
 
+  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = event.currentTarget.getAttribute('href');
+
+    if (href === '#sobre-mi') {
+      event.preventDefault();
+      document.getElementById('sobre-mi')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      setMenuOpen(false);
+    }
+  };
+
   return <main className="overflow-hidden bg-[#081014] text-[#f3f5ef]">
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#081014]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
