@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, BarChart3, BrainCircuit, ChevronDown, Cloud,
-  Database, Github, Globe2, Layers3, Linkedin, LockKeyhole, Mail, Menu, MessageCircle,
+  Database, Github, Globe2, GitBranch, Layers3, Linkedin, LockKeyhole, Mail, Menu, MessageCircle,
   Network, Play, Send, Server, ShieldCheck, Sparkles, Terminal, Workflow, X, Zap,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -31,12 +31,132 @@ const solutions = [
 ];
 
 const technologyGroups = [
-  { title: 'Cloud', icon: Cloud, items: ['Google Cloud', 'BigQuery', 'Cloud Storage', 'Cloud Composer', 'IAM', 'Secret Manager'] },
-  { title: 'Data', icon: Workflow, items: ['SQL', 'Python', 'BigQuery', 'Data Engineering', 'Data Governance'] },
-  { title: 'Orchestration', icon: Workflow, items: ['Apache Airflow', 'Cloud Composer'] },
-  { title: 'Database', icon: Database, items: ['Oracle', 'PL/SQL', 'BigQuery'] },
-  { title: 'BI', icon: BarChart3, items: ['Looker Studio', 'Analytics','Qlik Sense','Tableau'] },
-  { title: 'Automation / AI', icon: Sparkles, items: ['Python', 'AI', 'Automation', 'APIs'] },
+
+  {
+    title: 'Cloud & Platforms',
+    icon: Cloud,
+    items: [
+      'Google Cloud',
+      'BigQuery',
+      'Cloud Storage',
+      'Cloud Composer',
+      'Dataflow',
+      'Azure',
+      'Azure Data Factory',
+      'Microsoft Fabric',
+      'AWS'
+    ]
+  },
+
+  {
+    title: 'Data Engineering',
+    icon: Workflow,
+    items: [
+      'SQL',
+      'Python',
+      'Apache Spark',
+      'PySpark',
+      'dbt',
+      'Data Engineering',
+      'ETL / ELT',
+      'Data Pipelines',
+      'Data Modeling'
+    ]
+  },
+
+  {
+    title: 'Orchestration',
+    icon: Workflow,
+    items: [
+      'Apache Airflow',
+      'Cloud Composer',
+      'Azure Data Factory',
+      'Databricks Workflows',
+      'Data Pipelines',
+      'Scheduling',
+      'Monitoring'
+    ]
+  },
+
+  {
+    title: 'Data Platforms & Databases',
+    icon: Database,
+    items: [
+      'Oracle',
+      'PL/SQL',
+      'PostgreSQL',
+      'SQL Server',
+      'MySQL',
+      'MongoDB',
+      'Snowflake',
+      'Databricks',
+      'BigQuery'
+    ]
+  },
+
+  {
+    title: 'BI & Analytics',
+    icon: BarChart3,
+    items: [
+      'Qlik Sense',
+      'Looker Studio',
+      'Power BI',
+      'Tableau',
+      'Looker',
+      'Analytics',
+      'Data Visualization',
+      'KPI & Metrics'
+    ]
+  },
+
+  {
+    title: 'AI & Automation',
+    icon: Sparkles,
+    items: [
+      'Vertex AI',
+      'Gemini',
+      'Generative AI',
+      'Machine Learning',
+      'Python Automation',
+      'APIs',
+      'REST',
+      'GraphQL',
+      'Intelligent Automation'
+    ]
+  },
+
+  {
+    title: 'Governance & Security',
+    icon: ShieldCheck,
+    items: [
+      'Data Governance',
+      'Data Quality',
+      'Data Catalog',
+      'Data Lineage',
+      'IAM',
+      'Row-Level Security',
+      'Data Masking',
+      'Data Classification',
+      'Data Lifecycle'
+    ]
+  },
+
+  {
+    title: 'DevOps & DataOps',
+    icon: GitBranch,
+    items: [
+      'Git',
+      'GitHub',
+      'GitHub Actions',
+      'CI/CD',
+      'Docker',
+      'Terraform',
+      'Infrastructure as Code',
+      'Observability',
+      'FinOps'
+    ]
+  }
+
 ];
 
 const projects = [
