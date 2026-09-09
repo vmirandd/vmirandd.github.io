@@ -169,6 +169,131 @@ function DataEcosystemVisual() {
     </div>
   );
 }
+
+function DataFlowAnimation() {
+  const stages = [
+    { number: '01', label: 'DATA SOURCES', detail: 'ERP · APIs · DATABASES' },
+    { number: '02', label: 'INGESTION', detail: 'PIPELINES · AIRFLOW' },
+    { number: '03', label: 'GOOGLE CLOUD', detail: 'GCP · BIGQUERY · GCS' },
+    { number: '04', label: 'DATA ENGINEERING', detail: 'SQL · PYTHON · MODELS' },
+    { number: '05', label: 'GOVERNANCE', detail: 'IAM · QUALITY · LINEAGE' },
+    { number: '06', label: 'ANALYTICS / AI', detail: 'BI · AI · INSIGHTS' },
+    { number: '07', label: 'BUSINESS VALUE', detail: 'DECISIONS · IMPACT' },
+  ];
+
+  return (
+    <div className="relative mt-12 overflow-hidden border border-white/10 bg-[#081014] p-5 md:p-8">
+      <div className="absolute inset-0 grid-noise opacity-20" />
+
+      <div className="relative">
+        <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
+          <div className="flex items-center gap-3 font-mono text-[10px] tracking-[.18em] text-[#9ca9aa]">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-[#d7fb5f]" />
+            SYSTEM / DATA PIPELINE
+          </div>
+          <span className="font-mono text-[9px] tracking-[.15em] text-[#8de7e1]">
+            LIVE FLOW
+          </span>
+        </div>
+
+        <div className="relative">
+          <div className="hidden absolute left-[7%] right-[7%] top-[86px] h-px bg-white/10 md:block" />
+
+          <motion.div
+            className="hidden absolute left-[7%] top-[85px] h-[2px] bg-[#d7fb5f] shadow-[0_0_12px_#d7fb5f] md:block"
+            initial={{ width: '0%' }}
+            animate={{ width: '86%' }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+          />
+
+          <motion.div
+            className="hidden absolute top-[80px] h-3 w-3 rounded-full bg-[#d7fb5f] shadow-[0_0_18px_#d7fb5f] md:block"
+            animate={{
+              left: ['7%', '93%'],
+              opacity: [0, 1, 1, 0],
+              scale: [0.5, 1, 1.3, 0.5],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          />
+
+          <div className="grid gap-3 md:grid-cols-7 md:gap-0">
+            {stages.map((stage, index) => (
+              <div key={stage.number} className="relative flex md:block">
+                <div className="flex w-full items-center gap-4 md:block">
+                  <motion.div
+                    className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8de7e1]/40 bg-[#081014] font-mono text-[10px] text-[#9ca9aa] md:mx-auto md:h-12 md:w-12"
+                    animate={{
+                      borderColor: [
+                        'rgba(141,231,225,.25)',
+                        'rgba(215,251,95,.9)',
+                        'rgba(141,231,225,.25)',
+                      ],
+                      boxShadow: [
+                        '0 0 0 rgba(215,251,95,0)',
+                        '0 0 22px rgba(215,251,95,.22)',
+                        '0 0 0 rgba(215,251,95,0)',
+                      ],
+                    }}
+                    transition={{
+                      duration: 3.5,
+                      delay: index * 1.1,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    {stage.number}
+                  </motion.div>
+
+                  <div className="md:mt-5 md:text-center">
+                    <p className="font-display text-sm font-medium leading-tight text-[#f3f5ef] md:px-1">
+                      {stage.label}
+                    </p>
+                    <p className="mt-2 font-mono text-[8px] leading-4 tracking-[.08em] text-[#9ca9aa]">
+                      {stage.detail}
+                    </p>
+                  </div>
+                </div>
+
+                {index < stages.length - 1 && (
+                  <motion.div
+                    className="absolute left-[22px] top-[48px] h-6 w-px bg-[#8de7e1]/30 md:hidden"
+                    animate={{ opacity: [0.25, 1, 0.25] }}
+                    transition={{
+                      duration: 2,
+                      delay: index * 0.7,
+                      repeat: Infinity,
+                    }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-3">
+          <div className="border-l border-[#d7fb5f] pl-3">
+            <p className="font-mono text-[9px] tracking-[.15em] text-[#d7fb5f]">FLOW</p>
+            <p className="mt-1 text-xs text-[#9ca9aa]">Continuous data movement</p>
+          </div>
+
+          <div className="border-l border-[#8de7e1] pl-3">
+            <p className="font-mono text-[9px] tracking-[.15em] text-[#8de7e1]">CONTROL</p>
+            <p className="mt-1 text-xs text-[#9ca9aa]">Governance & observability</p>
+          </div>
+
+          <div className="border-l border-white/30 pl-3">
+            <p className="font-mono text-[9px] tracking-[.15em] text-[#f3f5ef]">IMPACT</p>
+            <p className="mt-1 text-xs text-[#9ca9aa]">Insights & business decisions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoStarted, setDemoStarted] = useState(false);
@@ -244,8 +369,17 @@ export default function Home() {
     <section id="metodologia" className="border-y border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="07 / Cómo trabajo" title={<>Método para avanzar<br /><span className="text-[#d7fb5f]">con claridad.</span></>} text="Una metodología que mantiene alineados el problema de negocio, la arquitectura y la operación." /><div className="grid gap-px border border-white/10 bg-white/10 md:grid-cols-5">{[['01', 'ENTENDER', 'Comprender el problema de negocio y los datos disponibles.'], ['02', 'DISEÑAR', 'Definir arquitectura, seguridad, gobierno y estrategia.'], ['03', 'CONSTRUIR', 'Implementar pipelines, modelos, automatizaciones y soluciones.'], ['04', 'OPTIMIZAR', 'Mejorar rendimiento, costos, calidad y operación.'], ['05', 'MEDIR', 'Implementar observabilidad y seguimiento.']].map(([number, title, text]) => <motion.article key={number} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#0c191c] p-6"><span className="font-mono text-xs text-[#d7fb5f]">{number}</span><h3 className="mt-12 font-display text-xl">{title}</h3><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">{text}</p></motion.article>)}</div></div></section>
 
     <AboutSection />
-
-    <section id="contacto" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="08 / Contacto" title={<>¿Tienes un reto<br /><span className="text-[#d7fb5f]">de datos?</span></>} text="Conversemos sobre cómo convertirlo en una solución tecnológica." /><div className="space-y-4 font-mono text-xs text-[#9ca9aa]"><a href={`mailto:${contactLinks.email}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Mail size={16} />{contactLinks.email}</a><a href={`https://wa.me/${contactLinks.whatsapp}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><MessageCircle size={16} /> {contactLinks.phone}</a><a href={contactLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Linkedin size={16} /> LinkedIn</a></div></div><form onSubmit={handleSubmit} className="border border-white/15 bg-[#0c191c] p-6 md:p-8"><div className="grid gap-5 md:grid-cols-2"><div><Field label="Nombre" name="name" required /><ValidationError prefix="Nombre" field="name" errors={state.errors} /></div><div><Field label="Email" name="email" type="email" required /><ValidationError prefix="Email" field="email" errors={state.errors} /></div><div><Field label="Empresa" name="company" /><ValidationError prefix="Empresa" field="company" errors={state.errors} /></div><div className="md:col-span-2"><label className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">Mensaje *</label><textarea required name="message" rows={5} className="mt-2 w-full resize-none border border-white/15 bg-transparent p-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" placeholder="Cuéntame brevemente sobre tu reto..." /><ValidationError prefix="Mensaje" field="message" errors={state.errors} /></div></div>{sent && <p className="mt-4 font-mono text-[10px] text-[#d7fb5f]">Mensaje enviado correctamente. Gracias por contactarme.</p>}{state.errors && <p className="mt-4 font-mono text-[10px] text-[#f3f5ef]">No pudimos enviar el mensaje. Inténtalo nuevamente.</p>}<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><button type="submit" disabled={state.submitting} className="flex items-center justify-center gap-3 bg-[#d7fb5f] px-5 py-3.5 text-sm font-bold text-[#081014] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60">{state.submitting ? <>Enviando... <Send size={16} /></> : sent ? <>Mensaje enviado <Send size={16} /></> : <>Preparar mensaje <Send size={16} /></>}</button><span className="font-mono text-[10px] text-[#9ca9aa]">{state.submitting ? 'ENVIANDO MENSAJE...' : sent ? 'MENSAJE ENVIADO' : 'FORMULARIO DE CONTACTO'}</span></div></form></div></section>
+    <section id="data-flow" className="relative overflow-hidden border-y border-white/10 bg-[#050b0d] px-5 py-24 lg:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="09 / Data Flow"
+          title={<>From data to<br /><span className="text-[#d7fb5f]">business value.</span></>}
+          text="Un flujo visual de cómo los datos atraviesan la plataforma, son gobernados y se convierten en información accionable."
+        />
+        <DataFlowAnimation />
+      </div>
+    </section>
+<section id="contacto" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="08 / Contacto" title={<>¿Tienes un reto<br /><span className="text-[#d7fb5f]">de datos?</span></>} text="Conversemos sobre cómo convertirlo en una solución tecnológica." /><div className="space-y-4 font-mono text-xs text-[#9ca9aa]"><a href={`mailto:${contactLinks.email}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Mail size={16} />{contactLinks.email}</a><a href={`https://wa.me/${contactLinks.whatsapp}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><MessageCircle size={16} /> {contactLinks.phone}</a><a href={contactLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Linkedin size={16} /> LinkedIn</a></div></div><form onSubmit={handleSubmit} className="border border-white/15 bg-[#0c191c] p-6 md:p-8"><div className="grid gap-5 md:grid-cols-2"><div><Field label="Nombre" name="name" required /><ValidationError prefix="Nombre" field="name" errors={state.errors} /></div><div><Field label="Email" name="email" type="email" required /><ValidationError prefix="Email" field="email" errors={state.errors} /></div><div><Field label="Empresa" name="company" /><ValidationError prefix="Empresa" field="company" errors={state.errors} /></div><div className="md:col-span-2"><label className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">Mensaje *</label><textarea required name="message" rows={5} className="mt-2 w-full resize-none border border-white/15 bg-transparent p-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" placeholder="Cuéntame brevemente sobre tu reto..." /><ValidationError prefix="Mensaje" field="message" errors={state.errors} /></div></div>{sent && <p className="mt-4 font-mono text-[10px] text-[#d7fb5f]">Mensaje enviado correctamente. Gracias por contactarme.</p>}{state.errors && <p className="mt-4 font-mono text-[10px] text-[#f3f5ef]">No pudimos enviar el mensaje. Inténtalo nuevamente.</p>}<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><button type="submit" disabled={state.submitting} className="flex items-center justify-center gap-3 bg-[#d7fb5f] px-5 py-3.5 text-sm font-bold text-[#081014] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60">{state.submitting ? <>Enviando... <Send size={16} /></> : sent ? <>Mensaje enviado <Send size={16} /></> : <>Preparar mensaje <Send size={16} /></>}</button><span className="font-mono text-[10px] text-[#9ca9aa]">{state.submitting ? 'ENVIANDO MENSAJE...' : sent ? 'MENSAJE ENVIADO' : 'FORMULARIO DE CONTACTO'}</span></div></form></div></section>
 
     <footer className="border-t border-white/10 px-5 py-8 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-center md:justify-between"><div><p className="font-mono text-xs tracking-[.16em]">VM DATA & CLOUD</p><p className="mt-2 text-xs text-[#9ca9aa]">Victor Miranda · Data Engineering · GCP · BI · AI</p></div><div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[10px] text-[#9ca9aa]"><a href="#servicios" className="hover:text-[#d7fb5f]">Servicios</a><a href="#proyectos" className="hover:text-[#d7fb5f]">Proyectos</a><a href="#tecnologias" className="hover:text-[#d7fb5f]">Tecnologías</a><a href="#sobre-mi" className="hover:text-[#d7fb5f]">Sobre mí</a><a href="#contacto" className="hover:text-[#d7fb5f]">Contacto</a></div><p className="font-mono text-[10px] text-[#9ca9aa]">© {new Date().getFullYear()} Victor Miranda</p></div></footer>
   </main>;
@@ -254,6 +388,8 @@ export default function Home() {
 function ArrowUpRightIcon() { return <ArrowUpRight size={15} />; }
 function FlowNode({ icon: Icon, label, value, active = false }: { icon: LucideIcon; label: string; value: string; active?: boolean }) { return <div className={`flex items-center justify-between border p-3 ${active ? 'border-[#d7fb5f]/50 bg-[#d7fb5f]/[.06]' : 'border-white/10'}`}><div className="flex items-center gap-3"><Icon size={17} className={active ? 'text-[#d7fb5f]' : 'text-[#8de7e1]'} /><span className="tracking-[.13em] text-[#c1cbca]">{label}</span></div><span className="text-[#9ca9aa]">{value}</span></div>; }
 function Field({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) { return <label className="block"><span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">{label}{required && ' *'}</span><input required={required} name={name} type={type} className="mt-2 w-full border border-white/15 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" /></label>; }
+
+
 
 
 
