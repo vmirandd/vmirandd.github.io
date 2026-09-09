@@ -66,109 +66,11 @@ function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: Reac
 
 function AboutSection() {
   const whatsappUrl = `https://wa.me/${contactLinks.whatsapp}`;
-  return <section id="sobre-mi" className="about-v5 scroll-mt-24 bg-[#d7fb5f] px-5 py-24 text-[#081014] lg:px-8 lg:py-32"><div className="mx-auto max-w-6xl"><p className="mb-5 font-mono text-xs tracking-[.25em]">10 / SOBRE MÍ</p><div className="border border-[#081014]/40 bg-[#0b1719] p-4 text-[#f3f5ef] shadow-[0_24px_70px_rgba(8,16,20,.2)] md:p-7"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><div className="relative min-h-[22rem] overflow-hidden border border-[#8de7e1]/35 bg-[#132427] sm:min-h-[28rem]"><Image src="/images/fotovictor.jpeg" alt="Victor Miranda, Data Owner y Data Engineer" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-center" priority /><span className="absolute bottom-5 left-5 border border-[#d7fb5f]/60 bg-[#d7fb5f] px-3 py-2 font-mono text-[10px] font-medium tracking-[.16em] text-[#081014]">VICTOR MIRANDA</span><span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#8de7e1]/70 bg-[#0b1719]/70 font-display text-sm text-[#8de7e1]">VM</span></div><div><p className="font-mono text-xs tracking-[.22em] text-[#d7fb5f]">SOBRE MÍ</p><h2 className="mt-4 font-display text-4xl leading-none tracking-[-.05em] md:text-6xl">Victor Miranda</h2><p className="mt-5 font-mono text-xs tracking-[.16em] text-[#8de7e1]">DATA OWNER · DATA ENGINEER · BI & DATA</p><p className="mt-8 max-w-xl font-display text-2xl leading-tight tracking-[-.03em]">Transformo datos complejos en plataformas confiables, dashboards accionables y soluciones orientadas al negocio.</p><p className="mt-5 max-w-xl text-sm leading-7 text-[#9ca9aa]">Trabajo en la conexión entre negocio, tecnología y datos, con especial enfoque en Google Cloud, BigQuery, Data Engineering, Data Governance, Qlik Sense, BI y automatización.</p><div className="mt-8 grid grid-cols-2 gap-2 border-t border-white/10 pt-6 text-xs"><Specialty icon={Cloud} label="Google Cloud" /><Specialty icon={Database} label="BigQuery" /><Specialty icon={BarChart3} label="Qlik Sense" /><Specialty icon={Layers3} label="BI & Dashboards" /><Specialty icon={ShieldCheck} label="Data Governance" /><Specialty icon={Workflow} label="Automatización" /><Specialty icon={BrainCircuit} label="AI + Data" /><Specialty icon={Network} label="Oracle / PLSQL" /></div></div></div><div className="mt-10 grid gap-3 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4"><ContactItem icon={Mail} label="EMAIL" value={contactLinks.email} href={`mailto:${contactLinks.email}`} action="Enviar email" /><ContactItem icon={MessageCircle} label="WHATSAPP" value={contactLinks.phone} href={whatsappUrl} action="Chatear por WhatsApp" external /><ContactItem icon={Linkedin} label="LINKEDIN" value="linkedin.com/in/vmirandd" href={contactLinks.linkedin} action="Ver perfil" external /><ContactItem icon={MessageCircle} label="TELÉFONO" value={contactLinks.phone} href={whatsappUrl} action="Comunicar por WhatsApp" external /></div></div></div></section>;
+  return <section id="sobre-mi" className="about-v5 scroll-mt-24 bg-[#d7fb5f] px-5 py-24 text-[#081014] lg:px-8 lg:py-32"><div className="mx-auto max-w-6xl"><p className="mb-5 font-mono text-xs tracking-[.25em]">08 / SOBRE MÍ</p><div className="border border-[#081014]/40 bg-[#0b1719] p-4 text-[#f3f5ef] shadow-[0_24px_70px_rgba(8,16,20,.2)] md:p-7"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><div className="relative min-h-[22rem] overflow-hidden border border-[#8de7e1]/35 bg-[#132427] sm:min-h-[28rem]"><Image src="/images/fotovictor.jpeg" alt="Victor Miranda, Data Owner y Data Engineer" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-center" priority /><span className="absolute bottom-5 left-5 border border-[#d7fb5f]/60 bg-[#d7fb5f] px-3 py-2 font-mono text-[10px] font-medium tracking-[.16em] text-[#081014]">VICTOR MIRANDA</span><span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#8de7e1]/70 bg-[#0b1719]/70 font-display text-sm text-[#8de7e1]">VM</span></div><div><p className="font-mono text-xs tracking-[.22em] text-[#d7fb5f]">SOBRE MÍ</p><h2 className="mt-4 font-display text-4xl leading-none tracking-[-.05em] md:text-6xl">Victor Miranda</h2><p className="mt-5 font-mono text-xs tracking-[.16em] text-[#8de7e1]">DATA OWNER · DATA ENGINEER · BI & DATA</p><p className="mt-8 max-w-xl font-display text-2xl leading-tight tracking-[-.03em]">Transformo datos complejos en plataformas confiables, dashboards accionables y soluciones orientadas al negocio.</p><p className="mt-5 max-w-xl text-sm leading-7 text-[#9ca9aa]">Trabajo en la conexión entre negocio, tecnología y datos, con especial enfoque en Google Cloud, BigQuery, Data Engineering, Data Governance, Qlik Sense, BI y automatización.</p><div className="mt-8 grid grid-cols-2 gap-2 border-t border-white/10 pt-6 text-xs"><Specialty icon={Cloud} label="Google Cloud" /><Specialty icon={Database} label="BigQuery" /><Specialty icon={BarChart3} label="Qlik Sense" /><Specialty icon={Layers3} label="BI & Dashboards" /><Specialty icon={ShieldCheck} label="Data Governance" /><Specialty icon={Workflow} label="Automatización" /><Specialty icon={BrainCircuit} label="AI + Data" /><Specialty icon={Network} label="Oracle / PLSQL" /></div></div></div><div className="mt-10 grid gap-3 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4"><ContactItem icon={Mail} label="EMAIL" value={contactLinks.email} href={`mailto:${contactLinks.email}`} action="Enviar email" /><ContactItem icon={MessageCircle} label="WHATSAPP" value={contactLinks.phone} href={whatsappUrl} action="Chatear por WhatsApp" external /><ContactItem icon={Linkedin} label="LINKEDIN" value="linkedin.com/in/vmirandd" href={contactLinks.linkedin} action="Ver perfil" external /><ContactItem icon={MessageCircle} label="TELÉFONO" value={contactLinks.phone} href={whatsappUrl} action="Comunicar por WhatsApp" external /></div></div></div></section>;
 }
 
 function Specialty({ icon: Icon, label }: { icon: LucideIcon; label: string }) { return <div className="flex items-center gap-2 text-[#c1cbca]"><Icon size={15} className="text-[#d7fb5f]" />{label}</div>; }
 function ContactItem({ icon: Icon, label, value, href, action, external = false }: { icon: LucideIcon; label: string; value: string; href: string; action: string; external?: boolean }) { return <div className="border border-white/10 p-4"><div className="flex items-center gap-2 font-mono text-[10px] tracking-[.16em] text-[#d7fb5f]"><Icon size={14} />{label}</div><p className="mt-3 break-words text-xs text-[#f3f5ef]">{value}</p><a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} className="mt-3 inline-flex border border-[#d7fb5f]/60 px-2.5 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]">{action}</a></div>; }
-
-function DataEcosystemVisual() {
-  const stages = [
-    'DATA SOURCES',
-    'INGESTION',
-    'GOOGLE CLOUD',
-    'DATA ENGINEERING',
-    'GOVERNANCE',
-    'ANALYTICS / AI',
-    'BUSINESS VALUE',
-  ];
-
-  const positions = [5, 20, 35, 50, 65, 80, 95];
-
-  return (
-    <div className="relative mt-10 overflow-hidden border border-white/10 bg-[#050b0d] shadow-[0_30px_100px_rgba(0,0,0,.35)]">
-      <div className="relative aspect-[16/9] w-full">
-        <div className="absolute inset-0">
-          <img
-            src="/images/data-ecosystem.png"
-            alt="VM Data & Cloud — From Data to Business Value"
-            className="absolute inset-0 h-full w-full object-contain"
-          />
-
-          {/* Línea de flujo */}
-          <div className="pointer-events-none absolute left-[5%] right-[5%] top-[48%] h-px bg-[#8de7e1]/20" />
-
-          {/* Nodos */}
-          {stages.map((stage, index) => (
-            <motion.div
-              key={stage}
-              className="pointer-events-none absolute top-[48%] -translate-x-1/2 -translate-y-1/2"
-              style={{ left: `${positions[index]}%` }}
-            >
-              <motion.div
-                className="h-2.5 w-2.5 rounded-full border border-[#d7fb5f] bg-[#d7fb5f] shadow-[0_0_14px_#d7fb5f]"
-                animate={{
-                  scale: [0.8, 1.25, 0.8],
-                  opacity: [0.65, 1, 0.65],
-                }}
-                transition={{
-                  duration: 2.8,
-                  delay: index * 0.35,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              <span className="absolute left-1/2 top-5 -translate-x-1/2 whitespace-nowrap font-mono text-[8px] tracking-[.12em] text-[#8de7e1]/70">
-                0{index + 1}
-              </span>
-            </motion.div>
-          ))}
-
-          {/* Partículas que recorren el proceso */}
-          {[0, 1, 2].map((particle) => (
-            <motion.div
-              key={particle}
-              className="pointer-events-none absolute top-[48%] h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[#d7fb5f] shadow-[0_0_16px_#d7fb5f]"
-              animate={{
-                left: ['5%', '20%', '35%', '50%', '65%', '80%', '95%'],
-                opacity: [0, 1, 1, 1, 1, 1, 0],
-                scale: [0.6, 1, 1.2, 1, 1.2, 1, 0.6],
-              }}
-              transition={{
-                duration: 9,
-                delay: particle * 3,
-                repeat: Infinity,
-                ease: 'linear',
-                times: [0, .16, .33, .5, .66, .83, 1],
-              }}
-            />
-          ))}
-
-          {/* Indicador de proceso */}
-          <motion.div
-            className="pointer-events-none absolute left-1/2 top-[8%] -translate-x-1/2 border border-[#8de7e1]/30 bg-[#081014]/80 px-4 py-2 backdrop-blur-md"
-            animate={{ opacity: [0.65, 1, 0.65] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <span className="font-mono text-[9px] tracking-[.2em] text-[#d7fb5f]">
-              ● LIVE DATA FLOW
-            </span>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between border-t border-white/10 bg-[#081014] px-5 py-3">
-        <span className="font-mono text-[9px] tracking-[.18em] text-[#9ca9aa]">
-          DATA → PLATFORM → GOVERNANCE → INSIGHTS → VALUE
-        </span>
-        <span className="hidden font-mono text-[9px] tracking-[.16em] text-[#d7fb5f] sm:block">
-          CONTINUOUS FLOW
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function DataFlowAnimation() {
   const stages = [
@@ -197,17 +99,17 @@ function DataFlowAnimation() {
         </div>
 
         <div className="relative">
-          <div className="hidden absolute left-[7%] right-[7%] top-[86px] h-px bg-white/10 md:block" />
+          <div className="hidden absolute left-[7%] right-[7%] top-[112px] h-px bg-white/10 md:block" />
 
           <motion.div
-            className="hidden absolute left-[7%] top-[85px] h-[2px] bg-[#d7fb5f] shadow-[0_0_12px_#d7fb5f] md:block"
+            className="hidden absolute left-[7%] top-[111px] h-[2px] bg-[#d7fb5f] shadow-[0_0_12px_#d7fb5f] md:block"
             initial={{ width: '0%' }}
             animate={{ width: '86%' }}
             transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
           />
 
           <motion.div
-            className="hidden absolute top-[80px] h-3 w-3 rounded-full bg-[#d7fb5f] shadow-[0_0_18px_#d7fb5f] md:block"
+            className="hidden absolute top-[106px] h-3 w-3 rounded-full bg-[#d7fb5f] shadow-[0_0_18px_#d7fb5f] md:block"
             animate={{
               left: ['7%', '93%'],
               opacity: [0, 1, 1, 0],
@@ -334,33 +236,67 @@ export default function Home() {
 
     <section id="soluciones" className="relative overflow-hidden border-y border-white/10 bg-[#0b1719] px-5 py-24 lg:px-8 lg:py-32"><div className="absolute inset-0 grid-noise opacity-40" /><div className="absolute -right-32 top-24 h-80 w-80 rounded-full bg-[#8de7e1]/[.07] blur-[110px]" /><div className="relative mx-auto max-w-7xl"><div className="mb-12 max-w-3xl"><p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-[#d7fb5f]">02 / Del problema a la solución</p><h2 className="font-display text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-[#f3f5ef] md:text-6xl">¿Dónde está el problema?<br /><span className="text-[#8de7e1]">Ahí empieza el trabajo.</span></h2><p className="mt-5 max-w-xl text-base leading-7 text-[#c1cbca]">Cada reto merece un camino claro: diagnóstico, diseño, ejecución y evidencia para decidir mejor.</p></div><div className="grid gap-4 lg:grid-cols-2">{solutions.map((solution, index) => <motion.article key={solution.problem} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .08 }} viewport={{ once: true }} className="group border border-white/15 bg-[#101f21] p-6 transition-colors hover:border-[#d7fb5f]/60 md:p-8"><div className="mb-7 flex items-center justify-between"><span className="font-mono text-[10px] tracking-[.2em] text-[#d7fb5f]">0{index + 1} / WORKFLOW</span><ArrowDownRight size={19} className="text-[#8de7e1] transition-transform group-hover:translate-x-1 group-hover:translate-y-1" /></div><h3 className="font-display text-2xl tracking-[-.04em] text-[#f3f5ef] md:text-3xl">{solution.problem}</h3><p className="mt-3 max-w-lg text-sm leading-6 text-[#c1cbca]">{solution.detail}</p><div className="mt-8 flex flex-wrap items-center gap-2">{solution.steps.map((step, stepIndex) => <div key={step} className="flex items-center gap-2"><span className={`border px-2.5 py-2 font-mono text-[10px] font-medium tracking-[.12em] ${solution.tone === 'lime' ? 'border-[#d7fb5f]/50 text-[#d7fb5f]' : 'border-[#8de7e1]/50 text-[#8de7e1]'}`}>{step}</span>{stepIndex < solution.steps.length - 1 && <ArrowRight size={13} className="text-[#c1cbca]" />}</div>)}</div></motion.article>)}</div></div></section>
 
-    <section id="arquitectura" className="relative overflow-hidden border-b border-white/10 px-5 py-24 lg:px-8 lg:py-32">
-      <div className="absolute right-0 top-0 h-full w-1/3 bg-[#d7fb5f]/[.03]" />
-      <div className="relative mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="03 / Data Architecture"
-          title={<>From data to<br /><span className="text-[#d7fb5f]">business value.</span></>}
-          text="Un ecosistema de datos moderno que conecta fuentes, ingeniería, gobierno, analítica e inteligencia artificial para convertir información en decisiones."
-        />
+      <section id="arquitectura" className="relative overflow-hidden border-b border-white/10 px-5 py-24 lg:px-8 lg:py-32">
+    <div className="absolute right-0 top-0 h-full w-1/3 bg-[#d7fb5f]/[.03]" />
 
-        <DataEcosystemVisual />
+    <div className="relative mx-auto max-w-7xl">
+      <SectionHeading
+        eyebrow="03 / Data → Value"
+        title={<>Una arquitectura que conecta<br /><span className="text-[#d7fb5f]">datos con decisiones.</span></>}
+        text="Una visión conceptual de alto nivel: entender el origen, gobernar el proceso y llevar información confiable al negocio."
+      />
 
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5">
-          <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[9px] tracking-[.14em] text-[#9ca9aa]">
-            <span>SCALABILITY</span>
-            <span>GOVERNANCE</span>
-            <span>SECURITY</span>
-            <span>OBSERVABILITY</span>
-            <span>FINOPS</span>
-          </div>
+      <div className="grid items-center gap-14 lg:grid-cols-[1fr_280px]">
+        <div className="grid gap-3 sm:grid-cols-6">
+          {[
+            'BUSINESS DATA',
+            'INGESTION',
+            'TRANSFORMATION',
+            'GOVERNANCE',
+            'ANALYTICS / AI',
+            'BUSINESS VALUE',
+          ].map((label, index) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, x: -12 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * .12 }}
+              viewport={{ once: true }}
+              className="relative flex min-h-32 min-w-0 overflow-hidden flex-col justify-between border border-[#8de7e1]/30 bg-[#0c191c] p-4"
+            >
+              <span className="font-mono text-[10px] text-[#9ca9aa]">
+                0{index + 1}
+              </span>
 
-          <span className="font-mono text-[9px] tracking-[.16em] text-[#d7fb5f]">
-            DATA → DECISIONS
-          </span>
+              <div className="min-w-0">
+                <div className="mb-2 h-1 w-7 bg-[#d7fb5f]" />
+                <p className="w-full break-words text-center font-display text-[11px] font-medium leading-[1.15] tracking-normal [overflow-wrap:anywhere]">
+                  {label}
+                </p>
+              </div>
+
+              {index < 5 && (
+                <ArrowRight
+                  className="absolute -right-5 top-1/2 z-10 hidden -translate-y-1/2 text-[#d7fb5f] sm:block"
+                  size={16}
+                />
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="border-l border-[#d7fb5f]/40 pl-6">
+          <p className="font-mono text-[10px] uppercase tracking-[.17em] text-[#d7fb5f]">
+            Principio de diseño
+          </p>
+          <p className="mt-3 text-sm leading-6 text-[#9ca9aa]">
+            Cada capa tiene un propósito: contexto, control, calidad y capacidad de decisión.
+          </p>
         </div>
       </div>
-    </section>
-    <section className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl items-start gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="04 / AI + Data Engineering" title={<>Preguntas de negocio,<br /><span className="text-[#8de7e1]">respuestas con contexto.</span></>} text="La inteligencia artificial es más útil cuando entiende tus datos, tus procesos y tus decisiones." /><div className="flex items-center gap-3 font-mono text-[10px] text-[#9ca9aa]"><span className="h-px w-10 bg-[#d7fb5f]" /> DEMO VISUAL · SIN DATOS REALES</div></div><div className="soft-glow border border-white/15 bg-[#0c191c] p-5 md:p-7"><div className="flex items-center justify-between border-b border-white/10 pb-4"><div className="flex items-center gap-2 font-mono text-xs text-[#9ca9aa]"><Terminal size={15} className="text-[#d7fb5f]" /> ask-data</div><button onClick={() => setDemoStarted(true)} className="flex items-center gap-2 border border-[#d7fb5f]/40 px-3 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]"><Play size={12} fill="currentColor" /> {demoStarted ? 'RUNNING' : 'RUN DEMO'}</button></div><div className="min-h-64 pt-6 font-mono text-xs leading-7"><p className="text-[#d7fb5f]">$ ask-data</p><p className="text-[#f3f5ef]">&gt; ¿Cuál es la categoría con mayor crecimiento?</p><AnimatePresence>{demoStarted ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 space-y-3"><p className="text-[#9ca9aa]">Analyzing data...</p><div className="h-2 w-full bg-white/10"><motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 1.2 }} className="h-full bg-[#d7fb5f]" /></div><p className="text-[#8de7e1]">Business insight generated.</p><p className="border-l border-[#d7fb5f] pl-3 text-[#f3f5ef]">Demo visual: conecta tus fuentes para obtener insights reales.</p></motion.div> : <p className="mt-6 text-[#9ca9aa]">Ready when your data is.</p>}</AnimatePresence></div></div></div></section>
+    </div>
+  </section>
+<section className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl items-start gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="04 / AI + Data Engineering" title={<>Preguntas de negocio,<br /><span className="text-[#8de7e1]">respuestas con contexto.</span></>} text="La inteligencia artificial es más útil cuando entiende tus datos, tus procesos y tus decisiones." /><div className="flex items-center gap-3 font-mono text-[10px] text-[#9ca9aa]"><span className="h-px w-10 bg-[#d7fb5f]" /> DEMO VISUAL · SIN DATOS REALES</div></div><div className="soft-glow border border-white/15 bg-[#0c191c] p-5 md:p-7"><div className="flex items-center justify-between border-b border-white/10 pb-4"><div className="flex items-center gap-2 font-mono text-xs text-[#9ca9aa]"><Terminal size={15} className="text-[#d7fb5f]" /> ask-data</div><button onClick={() => setDemoStarted(true)} className="flex items-center gap-2 border border-[#d7fb5f]/40 px-3 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]"><Play size={12} fill="currentColor" /> {demoStarted ? 'RUNNING' : 'RUN DEMO'}</button></div><div className="min-h-64 pt-6 font-mono text-xs leading-7"><p className="text-[#d7fb5f]">$ ask-data</p><p className="text-[#f3f5ef]">&gt; ¿Cuál es la categoría con mayor crecimiento?</p><AnimatePresence>{demoStarted ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 space-y-3"><p className="text-[#9ca9aa]">Analyzing data...</p><div className="h-2 w-full bg-white/10"><motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 1.2 }} className="h-full bg-[#d7fb5f]" /></div><p className="text-[#8de7e1]">Business insight generated.</p><p className="border-l border-[#d7fb5f] pl-3 text-[#f3f5ef]">Demo visual: conecta tus fuentes para obtener insights reales.</p></motion.div> : <p className="mt-6 text-[#9ca9aa]">Ready when your data is.</p>}</AnimatePresence></div></div></div></section>
 
     <section id="tecnologias" className="border-t border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="05 / Tecnologías" title={<>Las herramientas son el medio.<br /><span className="text-[#d7fb5f]">El criterio, la diferencia.</span></>} /><div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">{technologyGroups.map((group, index) => <motion.div key={group.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .06 }} viewport={{ once: true }} className={`border border-white/10 p-6 ${index === 0 ? 'lg:col-span-2' : ''}`}><div className="mb-6 flex items-center gap-3"><group.icon size={19} className="text-[#d7fb5f]" /><h3 className="font-display text-xl">{group.title}</h3></div><div className="flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="border border-white/15 px-3 py-2 font-mono text-[10px] text-[#c1cbca] transition-colors hover:border-[#8de7e1] hover:text-[#8de7e1]">{item}</span>)}</div></motion.div>)}</div></div></section>
 
@@ -369,17 +305,18 @@ export default function Home() {
     <section id="metodologia" className="border-y border-white/10 bg-[#0c191c] px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="07 / Cómo trabajo" title={<>Método para avanzar<br /><span className="text-[#d7fb5f]">con claridad.</span></>} text="Una metodología que mantiene alineados el problema de negocio, la arquitectura y la operación." /><div className="grid gap-px border border-white/10 bg-white/10 md:grid-cols-5">{[['01', 'ENTENDER', 'Comprender el problema de negocio y los datos disponibles.'], ['02', 'DISEÑAR', 'Definir arquitectura, seguridad, gobierno y estrategia.'], ['03', 'CONSTRUIR', 'Implementar pipelines, modelos, automatizaciones y soluciones.'], ['04', 'OPTIMIZAR', 'Mejorar rendimiento, costos, calidad y operación.'], ['05', 'MEDIR', 'Implementar observabilidad y seguimiento.']].map(([number, title, text]) => <motion.article key={number} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-[#0c191c] p-6"><span className="font-mono text-xs text-[#d7fb5f]">{number}</span><h3 className="mt-12 font-display text-xl">{title}</h3><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">{text}</p></motion.article>)}</div></div></section>
 
     <AboutSection />
+
     <section id="data-flow" className="relative overflow-hidden border-y border-white/10 bg-[#050b0d] px-5 py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="08 / Data Flow"
+          eyebrow="09 / Data Flow"
           title={<>From data to<br /><span className="text-[#d7fb5f]">business value.</span></>}
           text="Un flujo visual de cómo los datos atraviesan la plataforma, son gobernados y se convierten en información accionable."
         />
         <DataFlowAnimation />
       </div>
     </section>
-<section id="contacto" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="09 / Contacto" title={<>¿Tienes un reto<br /><span className="text-[#d7fb5f]">de datos?</span></>} text="Conversemos sobre cómo convertirlo en una solución tecnológica." /><div className="space-y-4 font-mono text-xs text-[#9ca9aa]"><a href={`mailto:${contactLinks.email}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Mail size={16} />{contactLinks.email}</a><a href={`https://wa.me/${contactLinks.whatsapp}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><MessageCircle size={16} /> {contactLinks.phone}</a><a href={contactLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Linkedin size={16} /> LinkedIn</a></div></div><form onSubmit={handleSubmit} className="border border-white/15 bg-[#0c191c] p-6 md:p-8"><div className="grid gap-5 md:grid-cols-2"><div><Field label="Nombre" name="name" required /><ValidationError prefix="Nombre" field="name" errors={state.errors} /></div><div><Field label="Email" name="email" type="email" required /><ValidationError prefix="Email" field="email" errors={state.errors} /></div><div><Field label="Empresa" name="company" /><ValidationError prefix="Empresa" field="company" errors={state.errors} /></div><div className="md:col-span-2"><label className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">Mensaje *</label><textarea required name="message" rows={5} className="mt-2 w-full resize-none border border-white/15 bg-transparent p-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" placeholder="Cuéntame brevemente sobre tu reto..." /><ValidationError prefix="Mensaje" field="message" errors={state.errors} /></div></div>{sent && <p className="mt-4 font-mono text-[10px] text-[#d7fb5f]">Mensaje enviado correctamente. Gracias por contactarme.</p>}{state.errors && <p className="mt-4 font-mono text-[10px] text-[#f3f5ef]">No pudimos enviar el mensaje. Inténtalo nuevamente.</p>}<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><button type="submit" disabled={state.submitting} className="flex items-center justify-center gap-3 bg-[#d7fb5f] px-5 py-3.5 text-sm font-bold text-[#081014] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60">{state.submitting ? <>Enviando... <Send size={16} /></> : sent ? <>Mensaje enviado <Send size={16} /></> : <>Preparar mensaje <Send size={16} /></>}</button><span className="font-mono text-[10px] text-[#9ca9aa]">{state.submitting ? 'ENVIANDO MENSAJE...' : sent ? 'MENSAJE ENVIADO' : 'FORMULARIO DE CONTACTO'}</span></div></form></div></section>
+<section id="contacto" className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="10 / Contacto" title={<>¿Tienes un reto<br /><span className="text-[#d7fb5f]">de datos?</span></>} text="Conversemos sobre cómo convertirlo en una solución tecnológica." /><div className="space-y-4 font-mono text-xs text-[#9ca9aa]"><a href={`mailto:${contactLinks.email}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Mail size={16} />{contactLinks.email}</a><a href={`https://wa.me/${contactLinks.whatsapp}`} className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><MessageCircle size={16} /> {contactLinks.phone}</a><a href={contactLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-[#d7fb5f]"><Linkedin size={16} /> LinkedIn</a></div></div><form onSubmit={handleSubmit} className="border border-white/15 bg-[#0c191c] p-6 md:p-8"><div className="grid gap-5 md:grid-cols-2"><div><Field label="Nombre" name="name" required /><ValidationError prefix="Nombre" field="name" errors={state.errors} /></div><div><Field label="Email" name="email" type="email" required /><ValidationError prefix="Email" field="email" errors={state.errors} /></div><div><Field label="Empresa" name="company" /><ValidationError prefix="Empresa" field="company" errors={state.errors} /></div><div className="md:col-span-2"><label className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">Mensaje *</label><textarea required name="message" rows={5} className="mt-2 w-full resize-none border border-white/15 bg-transparent p-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" placeholder="Cuéntame brevemente sobre tu reto..." /><ValidationError prefix="Mensaje" field="message" errors={state.errors} /></div></div>{sent && <p className="mt-4 font-mono text-[10px] text-[#d7fb5f]">Mensaje enviado correctamente. Gracias por contactarme.</p>}{state.errors && <p className="mt-4 font-mono text-[10px] text-[#f3f5ef]">No pudimos enviar el mensaje. Inténtalo nuevamente.</p>}<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><button type="submit" disabled={state.submitting} className="flex items-center justify-center gap-3 bg-[#d7fb5f] px-5 py-3.5 text-sm font-bold text-[#081014] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60">{state.submitting ? <>Enviando... <Send size={16} /></> : sent ? <>Mensaje enviado <Send size={16} /></> : <>Preparar mensaje <Send size={16} /></>}</button><span className="font-mono text-[10px] text-[#9ca9aa]">{state.submitting ? 'ENVIANDO MENSAJE...' : sent ? 'MENSAJE ENVIADO' : 'FORMULARIO DE CONTACTO'}</span></div></form></div></section>
 
     <footer className="border-t border-white/10 px-5 py-8 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-center md:justify-between"><div><p className="font-mono text-xs tracking-[.16em]">VM DATA & CLOUD</p><p className="mt-2 text-xs text-[#9ca9aa]">Victor Miranda · Data Engineering · GCP · BI · AI</p></div><div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-[10px] text-[#9ca9aa]"><a href="#servicios" className="hover:text-[#d7fb5f]">Servicios</a><a href="#proyectos" className="hover:text-[#d7fb5f]">Proyectos</a><a href="#tecnologias" className="hover:text-[#d7fb5f]">Tecnologías</a><a href="#sobre-mi" className="hover:text-[#d7fb5f]">Sobre mí</a><a href="#contacto" className="hover:text-[#d7fb5f]">Contacto</a></div><p className="font-mono text-[10px] text-[#9ca9aa]">© {new Date().getFullYear()} Victor Miranda</p></div></footer>
   </main>;
@@ -388,6 +325,10 @@ export default function Home() {
 function ArrowUpRightIcon() { return <ArrowUpRight size={15} />; }
 function FlowNode({ icon: Icon, label, value, active = false }: { icon: LucideIcon; label: string; value: string; active?: boolean }) { return <div className={`flex items-center justify-between border p-3 ${active ? 'border-[#d7fb5f]/50 bg-[#d7fb5f]/[.06]' : 'border-white/10'}`}><div className="flex items-center gap-3"><Icon size={17} className={active ? 'text-[#d7fb5f]' : 'text-[#8de7e1]'} /><span className="tracking-[.13em] text-[#c1cbca]">{label}</span></div><span className="text-[#9ca9aa]">{value}</span></div>; }
 function Field({ label, name, type = 'text', required = false }: { label: string; name: string; type?: string; required?: boolean }) { return <label className="block"><span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#9ca9aa]">{label}{required && ' *'}</span><input required={required} name={name} type={type} className="mt-2 w-full border border-white/15 bg-transparent px-3 py-3 text-sm outline-none transition-colors focus:border-[#d7fb5f]" /></label>; }
+
+
+
+
 
 
 
