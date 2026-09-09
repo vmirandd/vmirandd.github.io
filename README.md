@@ -23,7 +23,7 @@ npm start
 ## Pendiente de personalización
 
 - Sustituir `YOUR_EMAIL`, `YOUR_WHATSAPP` y `YOUR_LINKEDIN` en `app/page.tsx`.
-- Sustituir `https://example.com` por el dominio real en `app/layout.tsx`, `app/robots.ts` y `app/sitemap.ts`.
+- El dominio de publicación configurado es `https://vmirandd.github.io` en metadata, robots y sitemap.
 - Añadir fotografía, enlaces profesionales y casos reales cuando estén confirmados.
 - Conectar el formulario a un proveedor de email o backend antes de producción.
 

@@ -24,7 +24,7 @@ const services = [
 ];
 
 const solutions = [
-  { problem: 'BigQuery costoso', steps: ['PROBLEMA', 'ANÁLISIS', 'ARQUITECTURA', 'IMPLEMENTACIÓN', 'RESULTADO'], detail: 'Optimización SQL, particiones y consultas para mejorar eficiencia y rendimiento.', tone: 'lime' },
+  { problem: 'BigQuery costoso', steps: ['PROBLEMA', 'ANÁLISIS', 'ARQUITECTURA', 'IMPLEMENTACIÓN', 'RESULTADO'], detail: 'Optimización de SQL, particionado y consultas para mejorar la eficiencia y el rendimiento.', tone: 'lime' },
   { problem: 'Procesos manuales', steps: ['PROBLEMA', 'ANÁLISIS', 'ARQUITECTURA', 'IMPLEMENTACIÓN', 'RESULTADO'], detail: 'Identificación de tareas repetitivas y automatización con Python, SQL y Airflow.', tone: 'cyan' },
   { problem: 'Oracle legacy', steps: ['PROBLEMA', 'ANÁLISIS', 'ARQUITECTURA', 'IMPLEMENTACIÓN', 'RESULTADO'], detail: 'Assessment y diseño de una ruta de modernización Oracle → GCP / BigQuery.', tone: 'lime' },
   { problem: 'Datos sin gobierno', steps: ['PROBLEMA', 'ANÁLISIS', 'ARQUITECTURA', 'IMPLEMENTACIÓN', 'RESULTADO'], detail: 'Ownership, políticas, IAM, calidad y linaje para datos confiables y controlados.', tone: 'cyan' },

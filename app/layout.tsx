@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Victor Miranda | Data Owner & Data Engineer',
   description: 'Victor Miranda — Data Owner & Data Engineer especializado en Google Cloud, BigQuery, Data Engineering, Data Governance, BI, AI y automatización.',
-  metadataBase: new URL('https://example.com'),
+  metadataBase: new URL('https://vmirandd.github.io'),
   openGraph: {
     title: 'Victor Miranda | Data Owner & Data Engineer',
     description: 'Transformo problemas de datos en soluciones tecnológicas confiables y orientadas al negocio.',
