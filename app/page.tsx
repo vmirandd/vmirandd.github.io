@@ -147,7 +147,7 @@ export default function Home() {
           scale: [0.6, 1.5, 0.6]
         }}
         transition={{
-          duration: 2.4,
+          duration: 4,
           delay: index * 0.4,
           repeat: Infinity,
           ease: "easeInOut"
@@ -162,7 +162,7 @@ export default function Home() {
             opacity: [0.45, 1, 0.45]
           }}
           transition={{
-            duration: 1.5,
+            duration: 2.8,
             delay: index * 0.35,
             repeat: Infinity,
             ease: "easeInOut"
