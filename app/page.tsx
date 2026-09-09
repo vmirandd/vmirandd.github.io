@@ -77,20 +77,6 @@ export default function Home() {
   const [demoStarted, setDemoStarted] = useState(false);
   const [state, handleSubmit] = useForm('xgaeppyr');
   const sent = state.succeeded;
-
-  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = event.currentTarget.getAttribute('href');
-
-    if (href === '#sobre-mi') {
-      event.preventDefault();
-      document.getElementById('sobre-mi')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-      setMenuOpen(false);
-    }
-  };
-
   const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const href = event.currentTarget.getAttribute('href');
 
