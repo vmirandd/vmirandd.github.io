@@ -513,7 +513,7 @@ export default function Home() {
                 transition={{ delay: 2.45 }}
                 className="pt-2 text-[9px] text-[#9ca9aa]"
               >
-                Demo visual · datos simulados · sin conexión a fuentes reales.
+                Datos simulados · sin conexión a fuentes reales. Solo para ejemplo de proceso.
               </motion.p>
 
             </motion.div>
