@@ -100,7 +100,83 @@ export default function Home() {
 
     <section id="soluciones" className="relative overflow-hidden border-y border-white/10 bg-[#0b1719] px-5 py-24 lg:px-8 lg:py-32"><div className="absolute inset-0 grid-noise opacity-40" /><div className="absolute -right-32 top-24 h-80 w-80 rounded-full bg-[#8de7e1]/[.07] blur-[110px]" /><div className="relative mx-auto max-w-7xl"><div className="mb-12 max-w-3xl"><p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-[#d7fb5f]">02 / Del problema a la solución</p><h2 className="font-display text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-[#f3f5ef] md:text-6xl">¿Dónde está el problema?<br /><span className="text-[#8de7e1]">Ahí empieza el trabajo.</span></h2><p className="mt-5 max-w-xl text-base leading-7 text-[#c1cbca]">Cada reto merece un camino claro: diagnóstico, diseño, ejecución y evidencia para decidir mejor.</p></div><div className="grid gap-4 lg:grid-cols-2">{solutions.map((solution, index) => <motion.article key={solution.problem} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * .08 }} viewport={{ once: true }} className="group border border-white/15 bg-[#101f21] p-6 transition-colors hover:border-[#d7fb5f]/60 md:p-8"><div className="mb-7 flex items-center justify-between"><span className="font-mono text-[10px] tracking-[.2em] text-[#d7fb5f]">0{index + 1} / WORKFLOW</span><ArrowDownRight size={19} className="text-[#8de7e1] transition-transform group-hover:translate-x-1 group-hover:translate-y-1" /></div><h3 className="font-display text-2xl tracking-[-.04em] text-[#f3f5ef] md:text-3xl">{solution.problem}</h3><p className="mt-3 max-w-lg text-sm leading-6 text-[#c1cbca]">{solution.detail}</p><div className="mt-8 flex flex-wrap items-center gap-2">{solution.steps.map((step, stepIndex) => <div key={step} className="flex items-center gap-2"><span className={`border px-2.5 py-2 font-mono text-[10px] font-medium tracking-[.12em] ${solution.tone === 'lime' ? 'border-[#d7fb5f]/50 text-[#d7fb5f]' : 'border-[#8de7e1]/50 text-[#8de7e1]'}`}>{step}</span>{stepIndex < solution.steps.length - 1 && <ArrowRight size={13} className="text-[#c1cbca]" />}</div>)}</div></motion.article>)}</div></div></section>
 
-    <section id="arquitectura" className="relative overflow-hidden border-b border-white/10 px-5 py-24 lg:px-8 lg:py-32"><div className="absolute right-0 top-0 h-full w-1/3 bg-[#d7fb5f]/[.03]" /><div className="relative mx-auto max-w-7xl"><SectionHeading eyebrow="03 / Data → Value" title={<>Una arquitectura que conecta<br /><span className="text-[#d7fb5f]">datos con decisiones.</span></>} text="Una visión conceptual de alto nivel: entender el origen, gobernar el proceso y llevar información confiable al negocio." /><div className="grid items-center gap-14 lg:grid-cols-[1fr_280px]"><div className="grid gap-3 sm:grid-cols-6">{['BUSINESS DATA', 'INGESTION', 'TRANSFORMATION', 'GOVERNANCE', 'ANALYTICS / AI', 'BUSINESS VALUE'].map((label, index) => <motion.div key={label} initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: index * .12 }} viewport={{ once: true }} className="relative flex min-h-32 min-w-0 overflow-hidden flex-col justify-between border border-[#8de7e1]/30 bg-[#0c191c] p-4"><span className="font-mono text-[10px] text-[#9ca9aa]">0{index + 1}</span><div className="min-w-0"><div className="mb-2 h-1 w-7 bg-[#d7fb5f]" /><p className="w-full break-words text-center font-display text-[11px] font-medium leading-[1.15] tracking-normal [overflow-wrap:anywhere]">{label}</p></div>{index < 5 && <ArrowRight className="absolute -right-5 top-1/2 z-10 hidden -translate-y-1/2 text-[#d7fb5f] sm:block" size={16} />}</motion.div>)}</div><div className="border-l border-[#d7fb5f]/40 pl-6"><p className="font-mono text-[10px] uppercase tracking-[.17em] text-[#d7fb5f]">Principio de diseño</p><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">Cada capa tiene un propósito: contexto, control, calidad y capacidad de decisión.</p></div></div></div></section>
+    <section id="arquitectura" className="relative overflow-hidden border-b border-white/10 px-5 py-24 lg:px-8 lg:py-32"><div className="absolute right-0 top-0 h-full w-1/3 bg-[#d7fb5f]/[.03]" /><div className="relative mx-auto max-w-7xl"><SectionHeading eyebrow="03 / Data → Value" title={<>Una arquitectura que conecta<br /><span className="text-[#d7fb5f]">datos con decisiones.</span></>} text="Una visión conceptual de alto nivel: entender el origen, gobernar el proceso y llevar información confiable al negocio." /><div className="grid items-center gap-14 lg:grid-cols-[1fr_280px]"><div className="grid gap-3 sm:grid-cols-6">
+  {['BUSINESS DATA', 'INGESTION', 'TRANSFORMATION', 'GOVERNANCE', 'ANALYTICS / AI', 'BUSINESS VALUE'].map((label, index) => (
+    <motion.div
+      key={label}
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: index * 0.15, duration: 0.5 }}
+      viewport={{ once: true }}
+      className="group relative flex min-h-32 min-w-0 flex-col justify-between overflow-visible border border-[#8de7e1]/30 bg-[#0c191c] p-4"
+    >
+      <span className="font-mono text-[10px] text-[#9ca9aa]">
+        0{index + 1}
+      </span>
+
+      <div className="min-w-0">
+        <motion.div
+          className="mb-2 h-1 w-7 origin-left bg-[#d7fb5f]"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ delay: index * 0.15 + 0.25, duration: 0.45 }}
+          viewport={{ once: true }}
+        />
+
+        <p className="w-full break-words text-center font-display text-[11px] font-medium leading-[1.15] tracking-normal [overflow-wrap:anywhere]">
+          {label}
+        </p>
+      </div>
+
+      <motion.div
+        className="absolute bottom-0 left-0 h-px bg-[#d7fb5f]"
+        initial={{ width: "0%" }}
+        whileInView={{ width: "100%" }}
+        transition={{
+          delay: index * 0.15 + 0.4,
+          duration: 0.8,
+          ease: "easeInOut"
+        }}
+        viewport={{ once: true }}
+      />
+
+      <motion.div
+        className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d7fb5f] opacity-0 shadow-[0_0_12px_#d7fb5f]"
+        animate={{
+          opacity: [0, 1, 0],
+          scale: [0.6, 1.5, 0.6]
+        }}
+        transition={{
+          duration: 2.4,
+          delay: index * 0.4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      {index < 5 && (
+        <motion.div
+          className="absolute -right-5 top-1/2 z-10 hidden -translate-y-1/2 sm:block"
+          animate={{
+            x: [0, 4, 0],
+            opacity: [0.45, 1, 0.45]
+          }}
+          transition={{
+            duration: 1.5,
+            delay: index * 0.35,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <ArrowRight
+            className="text-[#d7fb5f]"
+            size={16}
+          />
+        </motion.div>
+      )}
+    </motion.div>
+  ))}
+</div><div className="border-l border-[#d7fb5f]/40 pl-6"><p className="font-mono text-[10px] uppercase tracking-[.17em] text-[#d7fb5f]">Principio de diseño</p><p className="mt-3 text-sm leading-6 text-[#9ca9aa]">Cada capa tiene un propósito: contexto, control, calidad y capacidad de decisión.</p></div></div></div></section>
 
     <section className="px-5 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl items-start gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><SectionHeading eyebrow="04 / AI + Data Engineering" title={<>Preguntas de negocio,<br /><span className="text-[#8de7e1]">respuestas con contexto.</span></>} text="La inteligencia artificial es más útil cuando entiende tus datos, tus procesos y tus decisiones." /><div className="flex items-center gap-3 font-mono text-[10px] text-[#9ca9aa]"><span className="h-px w-10 bg-[#d7fb5f]" /> DEMO VISUAL · SIN DATOS REALES</div></div><div className="soft-glow border border-white/15 bg-[#0c191c] p-5 md:p-7"><div className="flex items-center justify-between border-b border-white/10 pb-4"><div className="flex items-center gap-2 font-mono text-xs text-[#9ca9aa]"><Terminal size={15} className="text-[#d7fb5f]" /> ask-data</div><button onClick={() => setDemoStarted(true)} className="flex items-center gap-2 border border-[#d7fb5f]/40 px-3 py-2 font-mono text-[10px] text-[#d7fb5f] transition-colors hover:bg-[#d7fb5f] hover:text-[#081014]"><Play size={12} fill="currentColor" /> {demoStarted ? 'RUNNING' : 'RUN DEMO'}</button></div><div className="min-h-64 pt-6 font-mono text-xs leading-7"><p className="text-[#d7fb5f]">$ ask-data</p><p className="text-[#f3f5ef]">&gt; ¿Cuál es la categoría con mayor crecimiento?</p><AnimatePresence>{demoStarted ? <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 space-y-3"><p className="text-[#9ca9aa]">Analyzing data...</p><div className="h-2 w-full bg-white/10"><motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 1.2 }} className="h-full bg-[#d7fb5f]" /></div><p className="text-[#8de7e1]">Business insight generated.</p><p className="border-l border-[#d7fb5f] pl-3 text-[#f3f5ef]">Demo visual: conecta tus fuentes para obtener insights reales.</p></motion.div> : <p className="mt-6 text-[#9ca9aa]">Ready when your data is.</p>}</AnimatePresence></div></div></div></section>
 
